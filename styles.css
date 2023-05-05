@@ -1,14 +1,84 @@
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  padding: 20px;
 }
-.product-section {
-  text-align: center;
-  padding: 20px;
-}
-
-.product-img {
+.bg-img {
+  background-image: url('https://user-images.githubusercontent.com/80693993/236562789-272ba7b6-c82d-4f1c-abdc-6dfc94db385b.jpg');
+  min-height: 380px;
   max-width: 100%;
-  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container {
+  position: relative;
+}
+.topnav {
+  overflow: hidden;
+  float: right;
+}
+.topnav a {
+  float: left;
+  color: #f1efef;
+  text-align: center;
+  padding: 1rem;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  color: black;
+}
+.text-block {
+  position: absolute;
+  text-align: justify;
+  top: 6rem;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.btn-second{
+  background-color: rgb(122, 103, 94);
+  color: white;
+  top: 19rem;
+  left: 2%;
+  font-size: 0.8rem;
+  padding: 12px 3rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.btn-first {
+  position: relative;
+  background-color: rgb(122, 103, 94);
+  color: white;
+  top: 19rem;
+  float: left;
+  left: 2%;
+  font-size: 0.8rem;
+  padding: 12px 3rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.left {
+  float: left;
+  width: 50%;
+}
+.right {
+  float: right;
+  width: 30%;
+  text-align: justify;
+  padding-right: 1rem;
+}
+.round-image {
+  background-image: url(); 
+  border-radius: 50%;
+  height: 100%;
+  width: 80%;
+  margin-left: -20%;
+  object-fit: cover;
+  margin-top: 5%;
+}
+.container2{
+  background-color: rgb(0, 0, 0);
 }
