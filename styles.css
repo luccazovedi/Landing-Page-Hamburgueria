@@ -1,5 +1,30 @@
+/*
+  BOTÃO VOLTAR AO TOPO
+*/
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 999;
+}
+.back-to-top.show {
+  opacity: 1;
+}
+.back-to-top:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease-in-out;
+}
 body {
-  margin:0;
+  margin: 0;
   font-family: 'Taviraj';
   background-color: #f5f1e5;
 }
@@ -30,10 +55,8 @@ body {
   background-size: cover;
 }
 .topnav {
-  background-color: rgb(255 195 116);;
-  
+  background-color: rgb(255 195 116);
 }
-
 .topnav a {
   float: right;
   display: block;
@@ -43,31 +66,30 @@ body {
   text-decoration: none;
   font-size: 17px;
 }
-
 .topnav a:hover {
   background-color: rgba(12, 9, 9, 0);
   color: rgb(0, 0, 0);
 }
-
 .topnav a.active {
-  background-color: #04AA6D;
+  background-color: #04aa6d;
   color: rgba(8, 8, 8, 0);
 }
-
 .topnav .icon {
   display: none;
 }
-
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
+  .topnav a:not(:first-child) {
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
   }
 }
-
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
@@ -88,11 +110,11 @@ body {
   padding-right: 2rem;
   max-width: 15rem;
 }
-.text-block h1{
+.text-block h1 {
   font-weight: 900;
 }
 .btn-first {
-  position:  relative;
+  position: relative;
   background-color: #726c54;
   color: white;
   float: left;
@@ -101,6 +123,12 @@ body {
   border: none;
   cursor: pointer;
   border-radius: 3px;
+}
+.btn-first:hover {
+  transform: scale(1.05);
+}
+.btn-second {
+  transform: scale(1.05);
 }
 .btn-second {
   background-color: #726c54;
@@ -114,52 +142,66 @@ body {
   border-radius: 3px;
 }
 
-
 /*
   SEGUNDA SESSÃO
 */
 .container-burguer {
-	margin: 0 auto;
-	padding: 60px;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	position: relative;
+  margin: 0 auto;
+  padding: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
   background-color: #f8e0bc;
 }
 .imagem-burguer {
-	width: 20em;
-	height: auto;
+  width: 20em;
+  height: auto;
   border-radius: 10rem;
 }
+.imagem-burguer {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+.container-burguer:hover .imagem-burguer {
+  transform: scale(1.2);
+}
 .text-burguer {
-	width: 30rem;
-	padding-left: 5rem;
-	position: relative;
-	z-index: 1;
+  width: 30rem;
+  padding-left: 5rem;
+  position: relative;
+  z-index: 1;
+}
+.text-burguer {
+  transform: translateY(100%);
+  transition: transform 0.5s ease-in-out;
+}
+.text-burguer.animate {
+  transform: translateY(0);
 }
 .texto-burguer h1 {
-	font-size: 76px;
-	margin-bottom: 20px;
+  font-size: 76px;
+  margin-bottom: 20px;
 }
 .texto-burguer p {
-	font-size: 68px;
-	margin-bottom: 30px;
+  font-size: 68px;
+  margin-bottom: 30px;
 }
 
 /*
   ESTATÍSTICAS
 */
-.statistics{
+.statistics {
   text-align: center;
   color: #7a695c;
   display: grid;
 }
-.statistics h1{
+.statistics h1 {
   font-size: 3rem;
 }
-.statistics p{
+.statistics p {
   font-size: 15px;
 }
 .grid {
@@ -170,13 +212,13 @@ body {
   justify-items: center;
   background-color: #f5f1e5;
   margin-top: 3rem;
-  margin-bottom:3rem;
+  margin-bottom: 3rem;
 }
-.text{
+.text {
   color: #a88d7a;
 }
 .circle-chart__circle {
-  animation: circle-chart-fill 2s reverse; 
+  animation: circle-chart-fill 2s reverse;
   transform: rotate(-90deg);
   transform-origin: center;
 }
@@ -188,7 +230,9 @@ body {
   color: #a88d7a;
 }
 @keyframes circle-chart-fill {
-  to { stroke-dasharray: 0 100; }
+  to {
+    stroke-dasharray: 0 100;
+  }
 }
 @keyframes circle-chart-appear {
   to {
@@ -205,7 +249,7 @@ body {
   justify-content: center;
   margin-bottom: 20px;
 }
-.filter-button{
+.filter-button {
   border: none;
   cursor: pointer;
   font-size: 1rem;
@@ -213,9 +257,8 @@ body {
   color: #e1e1e1;
   background-color: #726c54;
   font-weight: 600;
-  
 }
-.img-filter{
+.img-filter {
   width: 20%;
 }
 .card-container {
@@ -225,7 +268,7 @@ body {
   margin-bottom: 20px;
   margin-top: 1rem;
 }
-.btn-filter{
+.btn-filter {
   background-color: #726c54;
   color: white;
   font-size: 0.8rem;
@@ -234,20 +277,44 @@ body {
   cursor: pointer;
   border-radius: 3px;
 }
+.filter {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.filter-show {
+  opacity: 1;
+}
+@media screen and (max-width: 768px) {
+  .filter {
+    transition: opacity 0.2s ease-in-out;
+  }
+}
+@media screen and (min-width: 769px) {
+  .filter {
+    transition: opacity 0.5s ease-in-out;
+  }
+}
 .card {
   background-color: #fff;
   border: 1px solid #e1e1e1;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius:5px;
+  border-radius: 5px;
   margin: 20px;
   padding: 20px;
   text-align: center;
   width: 300px;
 }
+.card {
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.05);
+}
 .card img {
   max-width: 100%;
 }
-.card h3, h2{
+.card h3,
+h2 {
   font-size: 24px;
   margin-bottom: 10px;
   color: #796449;
@@ -260,11 +327,11 @@ body {
   color: #796449;
   text-align: justify;
 }
-.filter{
+.filter {
   background-color: #726c54;
   padding: 5rem;
 }
-.title-filter{
+.title-filter {
   text-align: center;
   color: #f1efef;
   font-size: 3rem;
@@ -278,6 +345,13 @@ body {
   padding: 50px;
   text-align: center;
   margin-bottom: 3rem;
+}
+.newsletter {
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-out;
+}
+.newsletter-visible {
+  transform: translateY(0%);
 }
 .newsletter h2 {
   font-size: 45px;
@@ -295,7 +369,7 @@ body {
   display: flex;
   justify-content: center;
 }
-.newsletter input[type="email"] {
+.newsletter input[type='email'] {
   padding: 10px;
   border-radius: 2px;
   border: none;
@@ -361,8 +435,7 @@ footer {
     padding-left: 0;
     align-content: center;
   }
-  .grid{
+  .grid {
     display: grid;
   }
 }
-

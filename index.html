@@ -1,9 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="PT">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landing Page</title>
+    <title>Hamburgueria Burgoo</title>
+
+    <meta name="description" content="Landing Page - Hamburgueria Burgoo" />
+    <meta name="keywords" content="HTML, CSS, Javascript, landing page" />
+    <meta property="og:title" content="Landing Page - Hamburgueria Burgoo" />
+    <meta
+      property="og:description"
+      content="Hamburgueria Burgoo - Landing Page"
+    />
+    <meta
+      property="og:image"
+      content="https://user-images.githubusercontent.com/80693993/236562842-b50d0355-c541-417d-a150-6ddfb1d7cccd.jpg"
+    />
+    <!-- Links-->
     <link
       rel="icon"
       type="image/x-icon"
@@ -19,10 +32,10 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Taviraj"
     />
-
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- BANNER PRINCIPAL -->
     <div class="container">
       <div class="bg-img">
         <div class="text-block">
@@ -33,6 +46,7 @@
           </p>
           <button class="btn-first">ORDER NOW</button>
         </div>
+        <!-- BARRA DE NAVEGAÇÃO -->
         <div class="topnav" id="navbar">
           <a href="#home">Home</a>
           <a href="#news">News</a>
@@ -44,6 +58,7 @@
         </div>
       </div>
     </div>
+    <!-- SEGUNDA SESSÃO -->
     <div class="container-burguer" href="home">
       <img
         src="https://user-images.githubusercontent.com/80693993/236562842-b50d0355-c541-417d-a150-6ddfb1d7cccd.jpg"
@@ -59,13 +74,14 @@
         <button class="btn-filter">ORDER NOW</button>
       </div>
     </div>
-    <div class="statistics">
+    <div class="statistics" id="news">
       <h1>Statistics</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
         Vivamus lacina odio vitae sestibulum vestibulum.
       </p>
     </div>
+    <!-- SESSÃO DE ESTATÍSTICAS -->
     <section class="grid">
       <section>
         <svg
@@ -225,6 +241,7 @@
         </svg>
       </section>
     </section>
+    <!-- SESSÃO DE PACKAGES -->
     <div class="filter">
       <h1 class="title-filter">Popular Package</h1>
       <div class="filter-buttons">
@@ -271,8 +288,8 @@
         </div>
       </div>
     </div>
-
-    <section class="newsletter">
+    <!-- SESSÃO DE NEWSLETTER -->
+    <section class="newsletter" id="contact">
       <div class="newsletter-container">
         <h2>Don't Miss Our Update</h2>
         <p>
@@ -285,8 +302,8 @@
         </form>
       </div>
     </section>
-
-    <footer>
+    <!-- FOOTER -->
+    <footer id="about">
       <div class="footer-left">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vivamos
@@ -302,7 +319,11 @@
         ></a>
       </div>
     </footer>
-
+    <!-- BOTÃO VOLTAR AO TOPO -->
+    <button class="back-to-top" onclick="scrollToTop()">
+      <i class="fa fa-chevron-up"></i>
+    </button>
+    <!-- SCRIPTS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
   </body>
