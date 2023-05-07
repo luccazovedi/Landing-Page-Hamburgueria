@@ -1,6 +1,25 @@
 body {
-  font-family: Arial, sans-serif;
+  margin:0;
+  font-family: 'Taviraj';
 }
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 3px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
 .bg-img {
   background-image: url('https://user-images.githubusercontent.com/80693993/236562789-272ba7b6-c82d-4f1c-abdc-6dfc94db385b.jpg');
   min-height: 380px;
@@ -16,7 +35,7 @@ body {
 }
 .topnav a {
   float: left;
-  color: #f1efef;
+  color: #020202;
   text-align: center;
   padding: 1rem;
   text-decoration: none;
@@ -27,11 +46,22 @@ body {
 }
 .text-block {
   position: absolute;
-  text-align: justify;
-  top: 6rem;
+  top: 3rem;
   color: white;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 15rem;
+}
+.btn-first {
+  position:  relative;
+  background-color: rgb(122, 103, 94);
+  color: white;
+  float: left;
+  font-size: 0.8rem;
+  padding: 12px 3rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
 }
 .btn-second {
   background-color: rgb(122, 103, 94);
@@ -44,13 +74,10 @@ body {
   cursor: pointer;
   border-radius: 3px;
 }
-.btn-first {
-  position: relative;
+
+.btn-filter{
   background-color: rgb(122, 103, 94);
   color: white;
-  top: 19rem;
-  float: left;
-  left: 2%;
   font-size: 0.8rem;
   padding: 12px 3rem;
   border: none;
@@ -78,48 +105,68 @@ body {
 }
 
 
-
-.stats-section {
-  display: flex;
-  justify-content: space-between;
-  max-width: 800px;
-  margin: 0 auto;
+.progress-section {
+  background: #f5f5f5;
+  padding: 50px 0;
 }
 
-.stat {
+.progress-container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  width: 30%;
-}
-
-.stat-value {
-  font-size: 48px;
-  font-weight: bold;
-  color: #4B6CB7;
-  margin-bottom: 10px;
-}
-
-.stat-label {
-  font-size: 18px;
-  font-weight: bold;
-  color: #182848;
-  text-align: center;
-}
-
-.progress-bar {
-  width: 100%;
-  height: 10px;
-  background-color: #f0f0f0;
-  border-radius: 5px;
+  flex-wrap: wrap;
 }
 
 .progress {
-  height: 100%;
-  background-color: #4B6CB7;
-  border-radius: 5px;
-  transition: width 0.5s ease-in-out;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
 }
+
+.progress .value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.progress .progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip: rect(0, 200px, 200px, 100px);
+}
+
+.progress .progress-bar-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  clip: rect(0, 100px, 200px, 0);
+  background: #2196f3;
+}
+
+.progress .progress-label {
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
 
 .filter-buttons {
   display: flex;
@@ -130,9 +177,14 @@ body {
 .filter-button {
   border: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1rem;
   transition: background-color 0.3s ease;
   background-color: #f8f8f800;
+  color: #e1e1e1;
+}
+
+.img-filter{
+  width: 20%;
 }
 
 .card-container {
@@ -173,4 +225,67 @@ body {
 .title-filter{
   text-align: center;
   color: #f1efef;
+}
+footer {
+  background-color: #2b2828;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left p {
+  margin: 0;
+  color: rgb(235, 228, 228);
+}
+
+.footer-right a {
+  margin-left: 10px;
+}
+
+.footer-right i {
+  font-size: 20px;
+  color: rgb(235, 228, 228);
+}
+
+.newsletter {
+  background-color: #f2f2f2;
+  padding: 50px;
+  text-align: center;
+}
+
+.newsletter h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.newsletter p {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.newsletter form {
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter input[type="email"] {
+  padding: 10px;
+  border-radius: 5px 0 0 5px;
+  border: none;
+  width: 300px;
+}
+
+.newsletter button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.newsletter button:hover {
+  background-color: #555;
 }

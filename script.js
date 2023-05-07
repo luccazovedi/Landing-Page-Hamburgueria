@@ -1,30 +1,12 @@
-$(document).ready(function() {
-  $('.stat-value').each(function() {
-    $(this).prop('Counter', 0).animate({
-      Counter: $(this).text()
-    }, {
-      duration: 3000,
-      easing: 'swing',
-      step: function(now) {
-        $(this).text(Math.ceil(now));
-      }
-    });
-  });
-});
-
 const filterButtons = document.querySelectorAll('.filter-button');
 const cardContainer = document.querySelector('.card-container');
 const cards = document.querySelectorAll('.card');
 
 filterButtons.forEach(button => {
   button.addEventListener('click', () => {
-    // Remover classe 'active' de todos os botões
     filterButtons.forEach(btn => btn.classList.remove('active'));
-    // Adicionar classe 'active' no botão clicado
     button.classList.add('active');
-    // Obter o filtro do botão clicado
     const filter = button.dataset.filter;
-    // Exibir somente os cards correspondentes ao filtro
     cards.forEach(card => {
       if (filter === 'all' || card.classList.contains(filter)) {
         card.style.display = 'block';
@@ -34,3 +16,21 @@ filterButtons.forEach(button => {
     });
   });
 });
+
+function animateProgress() {
+  const progressBars = document.querySelectorAll('.progress');
+  progressBars.forEach(bar => {
+    const value = bar.getAttribute('data-value');
+    const progressFill = bar.querySelector('.progress-bar-fill');
+    const progressValue = bar.querySelector('.value');
+    const radius = progressFill.getBoundingClientRect().width / 2;
+    const circumference = 2 * Math.PI * radius;
+    const offset = circumference - value / 100 * circumference;
+    
+    progressFill.style.strokeDasharray = `${circumference} ${circumference}`;
+    progressFill.style.strokeDashoffset = offset;
+    progressValue.textContent = `${value}%`;
+  });
+}
+
+animateProgress();

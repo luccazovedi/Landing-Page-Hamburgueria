@@ -9,18 +9,25 @@
       type="image/x-icon"
       href="https://cdn-icons-png.flaticon.com/512/4479/4479138.png"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Taviraj">
+
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="container">
       <div class="bg-img">
         <div class="text-block">
-          <h1>Get Cashback</h1>
-          <h1>up to 50%</h1>
+          <h1>Get Cashback Up to 50%</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            <br />Suspendise consectetur justo eu nunc consequat.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.Suspendise consectetur justo eu nunc consequat.
           </p>
+          <button class="btn-first">ORDER NOW</button>
         </div>
         <div class="topnav">
           <a href="#home">Home</a>
@@ -28,56 +35,100 @@
           <a href="#contact">Contact</a>
           <a href="#about">About</a>
         </div>
-        <button class="btn-first">ORDER NOW</button>
+       
       </div>
     </div>
-    <div class="stats-section">
-      <div class="stat" data-percentage="7">
-        <div class="stat-value">7k</div>
-        <div class="stat-label">COSTUMERS</div>
+    
+
+   <section class="progress-section">
+  <div class="progress-container">
+    <div class="progress" data-value="75">
+      <span class="value"></span>
+      <div class="progress-bar">
+        <div class="progress-bar-fill"></div>
       </div>
-      <div class="stat" data-percentage="90">
-        <div class="stat-value">109</div>
-        <div class="stat-label">OUTLETS</div>
-      </div>
-      <div class="stat" data-percentage="35">
-        <div class="stat-value">35</div>
-        <div class="stat-label">COUNTRY</div>
-      </div>
+      <div class="progress-label">Valor 1</div>
     </div>
+    
+    <div class="progress" data-value="45">
+      <span class="value"></span>
+      <div class="progress-bar">
+        <div class="progress-bar-fill"></div>
+      </div>
+      <div class="progress-label">Valor 2</div>
+    </div>
+    
+    <div class="progress" data-value="90">
+      <span class="value"></span>
+      <div class="progress-bar">
+        <div class="progress-bar-fill"></div>
+      </div>
+      <div class="progress-label">Valor 3</div>
+    </div>
+  </div>
+</section>
+
+    
+    
+    
     <div class="filter">
       <h1 class="title-filter">Popular Package</h1>
       <div class="filter-buttons">
         <button class="filter-button active" data-filter="all">ALL</button>
-        <button class="filter-button" data-filter="design">PACKAGE 1</button>
-        <button class="filter-button" data-filter="marketing">PACKAGE 2</button>
-        <button class="filter-button" data-filter="development">
-          PACKAGE 3
-        </button>
+        <button class="filter-button" data-filter="1">FILTER 1</button>
+        <button class="filter-button" data-filter="2">FILTER 2</button>
+        <button class="filter-button" data-filter="3">FILTER 3</button>
       </div>
       <div class="card-container">
-        <div class="card design">
+        <div class="card 1">
           <h3>PACKAGE 1</h3>
-          <img src="design-project.jpg" alt="Projeto de Design" />
-          <h2>$0.00</h2>
-          <p>Descrição do projeto de design.</p>
+          <img src="https://cdn-icons-png.flaticon.com/512/5092/5092154.png " alt="Projeto de Design" class="img-filter" />
+          <h2>$00.00</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <button class="btn-filter">ORDER NOW</button>
         </div>
 
-        <div class="card marketing">
+        <div class="card 2">
           <h3>PACKAGE 2</h3>
-          <img src="design-project.jpg" alt="Projeto de Design" />
-          <h2>$0.00</h2>
-          <p>Descrição do projeto de design.</p>
+          <img src="https://cdn-icons-png.flaticon.com/512/5092/5092154.png " alt="Projeto de Design" class="img-filter" />
+          <h2>$00.00</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <button class="btn-filter">ORDER NOW</button>
         </div>
 
-        <div class="card development">
+        <div class="card 3">
           <h3>PACKAGE 3</h3>
-          <img src="design-project.jpg" alt="Projeto de Design" />
-          <h2>$0.00</h2>
-          <p>Descrição do projeto de design.</p>
+          <img src="https://cdn-icons-png.flaticon.com/512/5092/5092154.png " alt="Projeto de Design" class="img-filter" />
+          <h2>$00.00</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <button class="btn-filter">ORDER NOW</button>
         </div>
       </div>
     </div>
+
+    <section class="newsletter">
+      <div class="newsletter-container">
+        <h2>Don't Miss Our Update</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vivamos lacinia odio vitae vestibulum vestibulum.</p>
+        <form>
+          <input type="email" placeholder="Seu endereço de e-mail" required>
+          <button type="submit">SUBSCRIBE</button>
+        </form>
+      </div>
+    </section>
+    
+
+
+    <footer>
+      <div class="footer-left">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vivamos lacinia odio vitae vestibulum vestibulum.</p>
+      </div>
+      <div class="footer-right">
+        <a href="facebook.com/luccazovedi"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
