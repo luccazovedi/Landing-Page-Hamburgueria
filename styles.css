@@ -97,7 +97,7 @@ body {
 }
 
 .imagem-burguer {
-	width: 50%;
+	width: 18em;
 	height: auto;
   border-radius: 10rem;
 }
@@ -302,3 +302,33 @@ footer {
 .newsletter button:hover {
   background-color: #555;
 }
+
+@media (max-width: 600px) {
+  .bg-img {
+    min-height: 600px;
+  }
+  .text-block {
+    max-width: 55%;
+    top: 10;
+    left: 0;
+    padding: 1rem;
+  }
+  .container-burguer {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .imagem-burguer {
+    width: 100%;
+    height: auto;
+    border-radius: 5rem;
+  }
+  .text-burguer {
+    width: 100%;
+    padding-left: 0;
+    align-content: center;
+  }
+  .grid{
+    display: grid;
+  }
+}
+
